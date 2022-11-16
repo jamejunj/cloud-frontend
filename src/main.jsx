@@ -6,13 +6,16 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Auth0Provider } from "@auth0/auth0-react";
 
+// set axious base url
+import axios from 'axios'
+axios.defaults.baseURL = import.meta.env.VITE_API_END_POINT
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Auth0Provider
-    domain="dev-qrzvkyi8.us.auth0.com"
-    clientId="ISrY48656nXRgX0Imjy1xpnOtuCtsIGJ"
-    redirectUri={'https://master.d2fc7hn0mgbhx.amplifyapp.com/'}
+    domain={import.meta.env.VITE_AUTH_DOMAIN}
+    clientId={import.meta.env.VITE_AUTH_CLIENT_ID}
+    redirectUri={import.meta.env.VITE_AUTH_REDIRECT_URI}
     >
     <BrowserRouter>
     <App />

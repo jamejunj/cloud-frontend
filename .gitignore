@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 server
+microservices
 test-be
 node_modules
 dist

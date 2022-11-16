@@ -37,7 +37,7 @@ function Response() {
   const [data, setData] = useState(null);
   const navigate = useNavigate();
   useEffect(()=>{
-    axios.get("http://localhost:3000/api/user/"+user.sub)
+    axios.get("/api/user/"+user.sub)
       .then(res => {
         if (res.data.error){
           navigate("/")
