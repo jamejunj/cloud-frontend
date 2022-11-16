@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Auth0Provider
     domain="dev-qrzvkyi8.us.auth0.com"
     clientId="ISrY48656nXRgX0Imjy1xpnOtuCtsIGJ"
-    redirectUri={'http://localhost:5173'}
+    redirectUri={'https://master.d2fc7hn0mgbhx.amplifyapp.com/'}
     >
     <BrowserRouter>
     <App />
