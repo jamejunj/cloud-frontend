@@ -15,6 +15,7 @@ function UploadFile() {
     const formData = new FormData()
     formData.append("file", file)
     formData.append("user_id", user.sub)
+    formData.append("user_data", JSON.stringify(user))
     axios.post("/api/upload", formData).then(res =>{
       if (res.data.status==='success'){
         navigate('/response')
